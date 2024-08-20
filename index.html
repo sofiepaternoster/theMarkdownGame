@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Booth Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .section { margin-bottom: 20px; }
+        .qr-code { width: 100px; height: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Innovation Booth Dashboard</h1>
+
+    <div class="section">
+        <h2>Markdown Cheat Sheet</h2>
+        <pre>
+# Header 1
+## Header 2
+**Bold Text**
+*Italic Text*
+- Bullet Point
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>Game 1</h2>
+        <p>High Score: <span id="highscore-game1">Loading...</span></p>
+        <img src="link_to_qr_code_image_1" alt="QR Code for Game 1" class="qr-code">
+    </div>
+
+    <div class="section">
+        <h2>Game 2</h2>
+        <p>High Score: <span id="highscore-game2">Loading...</span></p>
+        <img src="link_to_qr_code_image_2" alt="QR Code for Game 2" class="qr-code">
+    </div>
+
+    <script>
+        async function fetchHighScores() {
+            const response = await fetch('highscores.json');
+            const data = await response.json();
+            document.getElementById('highscore-game1').innerText = data.game1;
+            document.getElementById('highscore-game2').innerText = data.game2;
+        }
+
+        fetchHighScores();
+        setInterval(fetchHighScores, 60000); // Update every 60 seconds
+    </script>
+</body>
+</html>
