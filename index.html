@@ -9,9 +9,16 @@
         body { 
             font-family: Arial, sans-serif; 
             padding: 20px; 
-            background-color: rgb(219, 225, 196); 
+            background-color: #c1e1de; 
         }
-        .arcade-border {
+        .section { margin-bottom: 40px; }
+        .qr-code { width: 100px; height: 100px; }
+        .card { margin-bottom: 20px; background-color: #fff; color: #000; }
+        .logo { width: 150px; height: auto; display: block; margin: 0 auto 20px; }
+        table { width: 100%; background-color: white; }
+        th, td { padding: 10px; text-align: left; font-size: 0.875rem; } /* Smaller font size for table */
+        .card-subtitle { font-size: 0.875rem; } /* Smaller font size for subtitles */
+        .arcade-frame {
             border: 10px solid #000;
             border-radius: 20px;
             padding: 20px;
@@ -19,23 +26,16 @@
             background-color: #333;
             color: #fff;
         }
-        .section { margin-bottom: 40px; }
-        .qr-code { width: 100px; height: 100px; }
-        .card { margin-bottom: 20px; background-color: #fff; color: #000; }
-        .logo { width: 150px; height: auto; display: block; margin: 0 auto 20px; }
-        table { width: 100%; background-color: white; }
-        th, td { padding: 10px; text-align: left; }
-        .card-subtitle { font-size: 0.875rem; } /* Smaller font size for subtitles */
     </style>
 </head>
 <body>
-    <div class="container arcade-border">
+    <div class="container">
         <h1 class="text-center">The MarkDown Game</h1>
         <h2 class="text-center">Innovation Booth 2024</h2>
 
         <div class="row">
             <!-- Part 1: Markdown Cheat Sheets -->
-            <div class="col-md-5 section card">
+            <div class="col-md-4 section card">
                 <div class="card-body">
                     <h2 class="card-title">Markdown Cheat Sheets</h2>
                     <table class="table">
@@ -99,28 +99,35 @@
                 </div>
             </div>
 
-            <!-- Part 2: Test your memory! -->
-            <div class="col-md-3 section card">
-                <div class="card-body">
-                    <h2 class="card-title">Test your memory!</h2>
-                    <h3 class="card-subtitle mb-2 text-muted">How well do you know MarkDown? Can you get the fastest score?</h3>
-                    <img src="Memory.png" alt="Memory Game" class="img-fluid">
-                    <div class="mt-4">
-                        <h3>Highscore Memory</h3>
-                        <p>High Score: <span id="highscore-memory">Loading...</span></p>
-                    </div>
-                </div>
-            </div>
+            <!-- Part 2 and Part 3: Arcade Frame -->
+            <div class="col-md-8">
+                <div class="arcade-frame">
+                    <div class="row">
+                        <!-- Part 2: Test your memory! -->
+                        <div class="col-md-6 section card">
+                            <div class="card-body">
+                                <h2 class="card-title">Test your memory!</h2>
+                                <h3 class="card-subtitle mb-2 text-muted">How well do you know MarkDown? Can you get the fastest score?</h3>
+                                <img src="Memory.png" alt="Memory Game" class="img-fluid">
+                                <div class="mt-4">
+                                    <h3>Highscore Memory</h3>
+                                    <p>High Score: <span id="highscore-memory">Loading...</span></p>
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- Part 3: Will you blast your team mates away? -->
-            <div class="col-md-3 section card">
-                <div class="card-body">
-                    <h2 class="card-title">Will you blast your team mates away?</h2>
-                    <h3 class="card-subtitle mb-2 text-muted">Time for a little blast game. Get ready, set, go!</h3>
-                    <img src="Blast.png" alt="Blast Game" class="img-fluid">
-                    <div class="mt-4">
-                        <h3>Highscore Blast</h3>
-                        <p>High Score: <span id="highscore-blast">Loading...</span></p>
+                        <!-- Part 3: Will you blast your team mates away? -->
+                        <div class="col-md-6 section card">
+                            <div class="card-body">
+                                <h2 class="card-title">Will you blast your team mates away?</h2>
+                                <h3 class="card-subtitle mb-2 text-muted">Time for a little blast game. Get ready, set, go!</h3>
+                                <img src="Blast.png" alt="Blast Game" class="img-fluid">
+                                <div class="mt-4">
+                                    <h3>Highscore Blast</h3>
+                                    <p>High Score: <span id="highscore-blast">Loading...</span></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
