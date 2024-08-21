@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The MarkDown Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Audiowide&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: Open Sans, sans-serif; 
@@ -26,7 +26,7 @@
         .col-md-4:last-child { border-right: none; } /* Remove border from the last column */
         .subtitle { font-size: calc(1.5rem - 4px); font-style: italic; } /* Smaller and italic subtitle */
         .highscore, .score, .score-title {
-            font-family: 'VT323', monospace;
+            font-family: 'Audiowide', sans-serif; /* Change font to Audiowide */
             font-size: 1.5rem; /* Increase font size by 4 points (1rem + 4 points) */
             background-color: #000; /* Set background color to black */
             padding: 5px; /* Add some padding for better readability */
@@ -58,6 +58,10 @@
             background-color: #000; /* Set background color to black */
             padding: 10px;
             color: #fff; /* Set text color to white */
+        }
+        img {
+            height: 75%; /* Set image height to 75% of its original size */
+            width: auto; /* Maintain aspect ratio */
         }
 
         @keyframes flicker {
