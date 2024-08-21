@@ -33,6 +33,9 @@
             color: yellow; /* Set text color to yellow for highscore titles */
             display: block; /* Ensure the background color only covers the text */
         }
+        .score-title {
+            font-size: 2rem; /* Increase font size by 8 points (1rem + 8 points) */
+        }
         .score {
             color: #fff; /* Set text color to white for scores */
         }
@@ -41,6 +44,10 @@
         }
         .score-blast {
             color: #859ed2;
+        }
+        .highscore {
+            background-color: #fff; /* Highlight highest score with white background */
+            color: #000; /* Set text color to black for highest score */
         }
         ul {
             list-style-type: none; /* Remove bullets */
@@ -142,7 +149,7 @@
             <!-- Part 3: Will you blast your team mates away? -->
             <div class="col-md-4 section card text-center">
                 <div class="card-body">
-                    <h2 class="card-title">BLAST away!</h2>
+                    <h2 class="card-title">BLAST away!</h3>
                     <h3 class="card-subtitle mb-2 text-muted">Time for a little blast game. Get ready, set, go!</h3>
                     <img src="blast-game_v2.png" alt="Blast Game" class="img-fluid">
                     <div class="highscore-section mt-4">
