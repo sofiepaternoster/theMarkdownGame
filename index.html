@@ -72,6 +72,32 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
+
+        /* Rocket animation */
+        @keyframes flyAround {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(calc(100vw - 50px), 0); }
+            50% { transform: translate(calc(100vw - 50px), calc(100vh - 50px)); }
+            75% { transform: translate(0, calc(100vh - 50px)); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .rocket {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: url('rocket.png') no-repeat center center;
+            background-size: contain;
+            animation: flyAround 10s linear infinite;
+        }
+
+        .rocket:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .rocket:nth-child(3) {
+            animation-delay: 4s;
+        }
     </style>
 </head>
 <body>
@@ -174,6 +200,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Rocket elements -->
+    <div class="rocket"></div>
+    <div class="rocket"></div>
+    <div class="rocket"></div>
 
     <script>
         async function fetchHighScores() {
