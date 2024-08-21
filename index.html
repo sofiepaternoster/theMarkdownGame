@@ -30,74 +30,19 @@
         .highscore, .score, .score-title, .card-title, .subtitle, h1, h2 {
             font-family: 'Audiowide', sans-serif; /* Change font to Audiowide for titles */
         }
-        .highscore, .score, .score-title {
-            font-size: 1.5rem; /* Increase font size by 4 points (1rem + 4 points) */
-            background-color: #000; /* Set background color to black */
-            padding: 5px; /* Add some padding for better readability */
-            color: yellow; /* Set text color to yellow for highscore titles */
-            display: block; /* Ensure the background color only covers the text */
-        }
-        .score-title {
-            font-size: 2rem; /* Increase font size by 8 points (1rem + 8 points) */
-        }
-        .score {
-            color: #fff; /* Set text color to white for scores */
-        }
-        .score-memory {
-            color: #e24927;
-        }
-        .score-blast {
-            color: #859ed2;
-        }
-        .highscore {
-            background-color: #fff; /* Highlight highest score with white background */
-            color: #000; /* Set text color to black for highest score */
-            animation: flicker 1s infinite; /* Add flicker animation */
-        }
+
+    
         ul {
             list-style-type: none; /* Remove bullets */
             padding: 0; /* Remove padding */
         }
-        .highscore-section {
-            background-color: #000; /* Set background color to black */
-            padding: 10px;
-            color: #fff; /* Set text color to white */
         }
         img {
             height: auto;
-            width: 70%; /* Scale the image to 70% of its original size */
+            width: 80%; /* Scale the image to 80% of its original size */
         }
 
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        /* Rocket animation */
-        @keyframes flyAround {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(calc(100vw - 50px), 0); }
-            50% { transform: translate(calc(100vw - 50px), calc(100vh - 50px)); }
-            75% { transform: translate(0, calc(100vh - 50px)); }
-            100% { transform: translate(0, 0); }
-        }
-
-        .rocket {
-            position: fixed;
-            width: 50px;
-            height: 50px;
-            background: url('rocket.png') no-repeat center center;
-            background-size: contain;
-            animation: flyAround 20s linear infinite; /* Slower animation */
-        }
-
-        .rocket:nth-child(2) {
-            animation-delay: 5s;
-        }
-
-        .rocket:nth-child(3) {
-            animation-delay: 10s;
-        }
+       
     </style>
 </head>
 <body>
