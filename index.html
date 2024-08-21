@@ -21,6 +21,8 @@
         .container-fluid { padding-left: 5%; padding-right: 5%; } /* Custom padding to reduce whitespace */
         .text-center { text-align: center; }
         .row > [class*='col-'] { margin-bottom: 20px; } /* Increase separation between columns */
+        .col-md-4 { border-right: 6px solid #c1e1de; } /* Thicker and colored border */
+        .col-md-4:last-child { border-right: none; } /* Remove border from the last column */
     </style>
 </head>
 <body>
@@ -112,7 +114,7 @@
             <!-- Part 3: Will you blast your team mates away? -->
             <div class="col-md-4 section card text-center">
                 <div class="card-body">
-                    <h2 class="card-title">BLAST away!</h3>
+                    <h2 class="card-title">BLAST away!</h2>
                     <h3 class="card-subtitle mb-2 text-muted">Time for a little blast game. Get ready, set, go!</h3>
                     <img src="Blast-game.png" alt="Blast Game" class="img-fluid">
                     <div class="mt-4">
