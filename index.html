@@ -48,6 +48,7 @@
         .highscore {
             background-color: #fff; /* Highlight highest score with white background */
             color: #000; /* Set text color to black for highest score */
+            animation: flicker 1s infinite; /* Add flicker animation */
         }
         ul {
             list-style-type: none; /* Remove bullets */
@@ -57,6 +58,11 @@
             background-color: #000; /* Set background color to black */
             padding: 10px;
             color: #fff; /* Set text color to white */
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
     </style>
 </head>
